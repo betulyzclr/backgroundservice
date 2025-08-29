@@ -1,0 +1,74 @@
+﻿@model backgroundservice.Models.JobViewModel
+
+@{
+    // Sayfanın başlığını belirler.
+    ViewData["Title"] = "Create New Job";
+}
+
+<h1>Create New Job</h1>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<form asp-controller="Jobs" asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label asp-for="JobName" class="control-label"></label>
+        <input asp-for="JobName" class="form-control" />
+        <span asp-validation-for="JobName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="JobKey" class="control-label"></label>
+        <input asp-for="JobKey" class="form-control" />
+        <span asp-validation-for="JobKey" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="JobDescription" class="control-label"></label>
+        <input asp-for="JobDescription" class="form-control" />
+        <span asp-validation-for="JobDescription" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Endpoint" class="control-label"></label>
+        <input asp-for="Endpoint" class="form-control" />
+        <span asp-validation-for="Endpoint" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Schedule" class="control-label"></label>
+        <input asp-for="Schedule" class="form-control" />
+        <span asp-validation-for="Schedule" class="text-danger"></span>
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" asp-for="IsActive" class="form-check-input" />
+        <label class="form-check-label" asp-for="IsActive"></label>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RetryCount" class="control-label"></label>
+        <input asp-for="RetryCount" class="form-control" />
+        <span asp-validation-for="RetryCount" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RetryMinutes" class="control-label"></label>
+        <input asp-for="RetryMinutes" class="form-control" />
+        <span asp-validation-for="RetryMinutes" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

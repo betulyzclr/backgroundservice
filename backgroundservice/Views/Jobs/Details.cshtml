@@ -1,0 +1,105 @@
+﻿@model backgroundservice.Models.JobViewModel
+
+@{
+    ViewData["Title"] = "Job Details";
+}
+
+<h1>Job Details</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobName)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobKey)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobKey)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobDescription)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endpoint)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endpoint)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Schedule)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Schedule)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RetryCount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RetryCount)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RetryMinutes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RetryMinutes)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastRunDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastRunDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastSuccessDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastSuccessDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastErrorDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastErrorDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastUpdatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastUpdatedDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastCreatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastCreatedDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to List</a>
+</div>
